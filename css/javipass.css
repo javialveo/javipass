@@ -1,0 +1,142 @@
+*{
+  box-sizing:border-box;
+}
+
+body, header, main, footer,
+div, p, h1,
+form, input, button, label, fieldset, legend{
+  margin:0;
+  padding:0;
+  border:0;
+  font:inherit;
+  font-size:100%;
+  vertical-align:baseline;
+}
+
+/* Configuración General */
+body{
+  font-size:0.8em;
+  font-family:Liberation Sans, Arial, sans-serif;
+  color:#262626;
+  background-color:#F7F7F7;
+}
+
+/* Configurando la cabecera */
+.cabecera{
+  display:flex;
+  justify-content:space-around;
+  background-color:#d9d9d9;
+  border-bottom:1px solid #ccc;
+  color:#353535;
+}
+
+.cabecera h1{
+  padding:0.5em;
+  font-size:1.26em;
+}
+
+.cabecera p{
+  padding:0.8em 0;
+}
+
+/* Configurando el contenido de la app */
+.contenido{
+  width:100%;
+  margin-bottom:1em;
+}
+
+.seccion{
+  display:flex;
+  margin:auto;
+  width:80%;
+  flex-wrap:wrap;
+  align-items:center;
+  justify-content:space-around;
+}
+
+.miApp p{
+  width:100%;
+  padding:0.6em;
+  text-align:center;
+  font-size:1.22em;
+}
+
+.miApp fieldset{
+  border:1px solid #ccc;
+  padding:0.8em;
+  margin-bottom:1em;
+  border-radius:5px;
+}
+
+.miApp legend{
+  padding:0.5em;
+}
+
+.miApp input{
+  vertical-align:middle;
+}
+
+.miApp input[type="number"]{
+  padding:0.5em;
+  border:1px solid #ccc;
+  border-radius:5px;
+}
+
+.miApp label{
+  display:inline-block;
+  padding:0.5em;
+}
+
+.miApp div{
+  width:100%;
+  text-align:center;
+}
+
+.miApp span{
+  display:block;
+  margin:auto;
+  padding:0.8em;
+}
+
+.miApp span:first-child{
+  font-weight:600;
+}
+
+.miApp span[id="zonaClaves"]{
+  width:40%;
+  background-color:#D9D9D9;
+  border:1px solid #ccc;
+  border-radius:5px;
+}
+
+.miApp button{
+  padding:1em;
+  border-radius:6px;
+  color:white;
+  background-color:#1A335E;
+  cursor:pointer;
+}
+
+#frmCaracteres{
+  display:none;
+}
+
+/* Configurando el pie de la web */
+.pie{
+  width:100%;
+}
+
+.pie div{
+  padding:1em;
+  text-align:center;
+}
+
+@media screen and (max-width:600px)
+{
+  .seccion{
+    width:80%;
+  }
+  .miApp span[id="zonaClaves"]{
+    width:70%;
+  }
+}

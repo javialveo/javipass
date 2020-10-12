@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es-PA">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/javipass.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JaviPass</title>
+  </head>
+  <body>
+    <header id="cabeceraWeb" class="cabecera">
+      <h1>JaviPass</h1>
+      <p>Versión: v0.1.0</p>
+    </header>
+    
+    <main id="contenidoWeb" class="contenido">
+      <div class="seccion miApp">
+        <p>Genera Contraseñas Seguras Con JaviPass</p>
+        <form id="frmCaracteres">
+          <fieldset>
+            <legend>Caracteres Presentes</legend>
+            <input type="checkbox" checked>
+            <label>Letras Mayusculas y Minusculas</label><br>
+            <input type="checkbox">
+            <label>Incluir Números</label><br>
+            <input type="checkbox">
+            <label>Incluir Símbolos</label><br>
+          </fieldset>
+        </form>
+        
+        <form id="frmRango">
+          <fieldset>
+            <legend>Número de caracteres</legend>
+            <label for="rango">Longitud: </label>
+            <input id="rango" type="number" min="8" max="20" value="10">
+          </fieldset>
+        </form>
+        
+        <div>
+          <span>Clave Generada</span>
+          <span id="zonaClaves"></span><br>
+          <button id="btnGenerar" type="button">Generar</button>
+        </div>
+      </div>
+    </main>
+    
+    <footer id="pieWeb" class="pie">
+      <div>
+        <p>&copy;2020 Eduardo Alveo. GPL-3.0+</p>
+      </div>
+    </footer>
+    
+    <script src="js/javipass.js"></script>
+  </body>
+</html>
