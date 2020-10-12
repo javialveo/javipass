@@ -1,2 +1,2 @@
-# javipass
+# JaviPass
 Sencillo generador de contraseñas
