@@ -23,32 +23,7 @@
 /* Función encargada de generar claves aleatorias */
 function generarClaves(rango)
 {
-  let valorAlfabetico = new Array("A", "B", "C", "D", "E", "F", "G", "H", 
-                                  "I", "J", "K", "L", "M", "N", "O", "P",
-                                  "Q", "R", "S", "T", "U", "V", "W", "X", 
-                                  "Y", "Z", "a", "b", "c", "d", "e", "f", 
-                                  "g", "h", "i", "j", "k", "l", "m", "n", 
-                                  "o", "p", "q", "r", "s", "t", "u", "v", 
-                                  "w", "x", "y", "z");
-  
-  let valorAlfanumerico = new Array("A", "B", "C", "D", "E", "F", "G", "H", 
-                                  "I", "J", "K", "L", "M", "N", "O", "P",
-                                  "Q", "R", "S", "T", "U", "V", "W", "X", 
-                                  "Y", "Z", "a", "b", "c", "d", "e", "f", 
-                                  "g", "h", "i", "j", "k", "l", "m", "n", 
-                                  "o", "p", "q", "r", "s", "t", "u", "v", 
-                                  "w", "x", "y", "z", "1", "2", "3", "4",
-                                  "5", "6", "7", "8", "9", "0");
-  
-  let valorAlfaSimbolico = new Array("a", "B", "C", "D", "E", "F", "G", "H", 
-                                  "I", "J", "K", "L", "M", "N", "O", "P",
-                                  "Q", "R", "S", "T", "U", "V", "W", "X", 
-                                  "Y", "Z", "A", "b", "1", "d", "e", "f", 
-                                  "g", "h", "i", "j", "k", "l", "m", "n", 
-                                  "o", "p", "q", "r", "s", "t", "u", "v", 
-                                  "w", "x", "y", "z", "c", "2", "3", "4",
-                                  "5", "6", "7", "8", "9", "0", "$", "!",
-                                  "&", "?");
+  let valorAlfaSimbolico = "abcdefghijklmnopq123456789!@%&$?ABCDEFGHIJKLMNOPQ";
   
   let valorAleatorio = new Number();
   let claveGenerada = new String();
@@ -56,11 +31,11 @@ function generarClaves(rango)
   for(let i = 0; i < rango; i++)
   {
     valorAleatorio = parseInt(Math.random() * valorAlfaSimbolico.length);
-    claveGenerada += valorAlfaSimbolico[valorAleatorio];
+    claveGenerada += valorAlfaSimbolico.charAt(valorAleatorio);
   }
   
   return claveGenerada;
-}
+} // fin de la función generarClaves
 
 /* Función creada para interactuar con los elementos HTMl */
 function mostrarClave()
@@ -69,9 +44,7 @@ function mostrarClave()
   let rangoClave = document.getElementById("rango"); // Obtiene el rango deseado por el usuario para su clave, entre 6 y 50 caracteres.
   
   miCampoClaves.textContent = generarClaves(parseInt(rangoClave.value));
-  
-  //console.log((miCampoClaves.value).length);
-}
+} // fin de la función mostrarClave
 
 /* Función creada para actuar como función main o punto de llamado a otras funciones */
 window.onload = function()
@@ -81,4 +54,4 @@ window.onload = function()
   mostrarClave();// genero una clave al cargar la web.
   
   mibotonGenera.onclick = mostrarClave;
-}
+} // fin de la función window.onload
