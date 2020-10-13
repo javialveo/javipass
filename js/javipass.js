@@ -1,7 +1,7 @@
 /*
  * javipass.js
  * 
- * Copyright 2020 Eduardo Alveo <ealveo@javipc>
+ * Copyright 2020 Eduardo Alveo <javialveo7@gmail.com>
  * 
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
