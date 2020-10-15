@@ -158,7 +158,9 @@ body{
 
 /* Configurando el pie de la web */
 .pie{
+  position:absolute;
   width:100%;
+  bottom:0;
   background-color:#416196;
   color:#fff;
 }
