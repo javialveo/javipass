@@ -35,19 +35,18 @@ form, input, button, label, fieldset, legend{
 
 /* Configuración General */
 body{
+  display:flex;
+  flex-direction:column;
   font-size:0.8em;
   font-family:Liberation Sans, Arial, sans-serif;
-  color:#262626;
-  background-color:#DEE2E7;
 }
 
-/* Configurando la cabecera */
+/* Configurando cabecera web */
 .cabecera{
   display:flex;
   justify-content:space-around;
-  background-color:#21385D;
-  border-bottom:1px solid #3B4C6A;
-  color:#FFFFFF;
+  background-color:#f1f1f1;
+  border-bottom:1px solid #d5d5d5;
 }
 
 .cabecera h1{
@@ -56,70 +55,67 @@ body{
 }
 
 .cabecera p{
-  padding:0.8em 0;
+  padding:0.8em;
 }
 
-/* Configurando el contenido de la app */
+/* Configurando contenido web */
 .contenido{
-  width:100%;
-  margin-bottom:2em;
+  display:flex;
+  margin:1em 0;
+  justify-content:space-around;
 }
 
 .seccion{
   display:flex;
-  margin:auto;
-  width:50%;
   flex-wrap:wrap;
-  align-items:center;
   justify-content:space-around;
-  border:1px solid #0F2141;
 }
 
 .miApp{
-  margin-top:4em;
+  width:90%;
   padding:1em;
-  border-radius:1em;
-  box-shadow:4px 5px 0.5em #2E3848;
-  color:#fff;
-  background-color:#416196;
+  background-color:#eee;
+  border:1px solid #888;
+  border-radius:5px;
 }
 
 .miApp p{
   width:100%;
-  padding:0.6em;
+  padding:0.2em;
+  margin-bottom:1em;
   text-align:center;
   font-size:1.22em;
+  color:#333;
 }
 
-.miApp > p{
-  font-weight:600;
+.miApp form[id=frmCaracteres]{
+  display:none;
 }
 
 .miApp fieldset{
-  border:1px solid #0F2141;
-  padding:0.8em;
   margin-bottom:1em;
-  border-radius:5px;
-  background-color:rgba(0,0,0,0.3);
+  padding:1em;
+  border:1px solid #888;
 }
 
 .miApp legend{
-  padding:0.5em;
+  display:inline-block;
+  padding:0.3em;
+  border:1px solid #888;
 }
 
-.miApp input{
+.miApp input[type="checkbox"]{
   vertical-align:middle;
 }
 
 .miApp input[type="number"]{
+  border:1px solid #d5d5d5;
   padding:0.5em;
-  border:1px solid #0F2141;
-  border-radius:5px;
 }
 
 .miApp label{
   display:inline-block;
-  padding:0.5em;
+  padding:0.4em;
 }
 
 .miApp div{
@@ -127,55 +123,57 @@ body{
   text-align:center;
 }
 
-.miApp span{
-  display:block;
-  margin:auto;
+.miApp div span{
+  display:inline-block;
   padding:0.8em;
 }
 
-.miApp span:first-child{
-  font-weight:600;
-}
-
 .miApp span[id="zonaClaves"]{
-  width:40%;
-  background-color:rgba(0,0,0,0.3);
-  border:1px solid #0F2141;
-  border-radius:5px;
-}
-
-.miApp button{
-  padding:1em;
+  border:1px solid #888;
+  width:30%;
+  background-color:#d5d5d5;
   border-radius:6px;
-  color:white;
-  background-color:#112446;
+}
+
+.boton{
+  display:inline-block;
+  margin:1em 0;
+  padding:1em;
+  /*border:1px solid #131C33;*/
+  border-radius:6px;
   cursor:pointer;
+  background-color:#0b96df;
+  font-weight:600;
+  color:white;
 }
 
-#frmCaracteres{
-  display:none;
+.boton:active{
+  background-color:#1C92D0;
 }
 
-/* Configurando el pie de la web */
+/* Configurando pie de la web */
 .pie{
-  position:absolute;
-  width:100%;
-  bottom:0;
-  background-color:#416196;
-  color:#fff;
+  display:flex;
+  justify-content:space-around;
 }
 
 .pie div{
-  padding:1em;
-  text-align:center;
+  padding:0.5em;
 }
 
-@media screen and (max-width:600px)
+@media screen and (min-width:900px)
 {
   .seccion{
-    width:82%;
+    width:50%;
   }
-  .miApp span[id="zonaClaves"]{
-    width:80%;
+}
+
+@media screen and (max-width:900px)
+{
+  .miApp div span:first-child{
+    width:100%;
+  }
+  .miApp div span[id="zonaClaves"]{
+    width:70%;
   }
 }
